@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 psycopg2 = "*"
+social-auth-app-django = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 

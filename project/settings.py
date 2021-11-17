@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apps.core',
+    'apps.account'
 ]
 
 MIDDLEWARE = [
@@ -97,7 +100,7 @@ DATABASES = {
     }
 }
 
-DATABASE_ROUTERS = ['snippets.routers.AuthRouter', 'path.to.PrimaryReplicaRouter']
+DATABASE_ROUTERS = ['snippets.routers.AuthRouter']
 
 
 # Password validation
@@ -118,6 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'account.CUser'
+
+PASSWORD_LENGTH = 10
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
